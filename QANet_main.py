@@ -19,9 +19,9 @@ from util.visualize import Visualizer
 from model.modules.ema import EMA
 from util.file_utils import pickle_load_large_file
 
-
-data_folder = "../../../datasets/"
-parser = argparse.ArgumentParser(description='Lucy')
+current_dir = os.getcwd()
+data_folder = os.path.join(os.path.abspath(current_dir), 'dataset/')
+parser = argparse.ArgumentParser()
 
 # dataset
 parser.add_argument(
