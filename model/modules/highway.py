@@ -2,8 +2,6 @@
 Highway network.
 """
 import torch.nn as nn
-import torch.nn.functional as F
-
 
 class Highway(nn.Module):
     """
@@ -38,7 +36,7 @@ class Highway(nn.Module):
         :Output: (N, *, size) * means any number of additional dimensions.
         """
         for i in range(self.n):
-            gate = F.sigmoid(self.gate[i](x))
+            gate = torch.sigmoid(self.gate[i](x))
             nonlinear = self.relu(self.linear[i](x))
             x = gate * nonlinear + (1 - gate) * x
         return x
