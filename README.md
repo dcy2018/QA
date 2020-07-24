@@ -8,12 +8,15 @@ Forked from Bangliu/QANet-PyTorch, just add dir'dataset' and change some paths i
 ## Requirement
 
 spacy >= 2.0.16
+
 visdom >= 0.1.8.9
+
 gensim >= 3.8.3
 
 GPU >= 16G for batchsize 32 (>=11G for batchsize 20)
 
 SQuAD 1.1 dataset(train-v1.1.json and dev-v1.1.json)
+
 Glove word_embedding file(glove.840B.300d.txt) and char_embedding file (glove.840B.300d-char.txt)
 
 ## Usage
