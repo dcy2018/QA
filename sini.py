@@ -72,7 +72,7 @@ def sinitext(i, o):
                 if checksame(linestarts, answers): #若多人标注答案在同一句中则接收
                     location = loca(linestarts, answers[0]['answer_start'])
                     pairs = {'context':'', 'qas':[{'question':'','answers':[],'id':''}]}
-                    pairs['context'] = lines[location]
+                    pairs['context'] = lines[location] + '.'
                     pairs['qas'][0]['question'] = para[n]['qas'][k]['question']
                     pairs['qas'][0]['id'] = para[n]['qas'][k]['id']
                     for i in range(len(answers)): #根据每份答案生成新的答案
