@@ -88,7 +88,8 @@ def sinitext(i, o):
         for n in range(len(para)): #每context, len(para)是context数量
             context = para[n]['context']
             lines = context.split('.')
-            lines.pop() #删除split导致的最后的空串
+            if lines[len(lines) - 1]:
+                lines.pop() #删除split导致的最后的空串
             lines = addjuhao(lines)
             linestarts = starts(lines)
             
